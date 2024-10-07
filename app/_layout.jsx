@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+// import { View, Text } from 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router'
 
@@ -8,7 +8,11 @@ const _layout = () => {
         screenOptions={{
             headerShown: false
         }}
-    />
+    >
+        <Stack.Screen name="exercises" options={{
+          presentation: 'fullScreenModal'
+        }} />
+    </Stack>
   )
 }
 
