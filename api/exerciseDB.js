@@ -12,13 +12,13 @@ const apiCall = async (url)=>{
                 offset: '0'
             },
             headers: {
-                'x-rapidapi-key': "c111887eb8msh3734e33f5421631p1d0710jsncda5f6c7776b",
+                'x-rapidapi-key': `${process.env.EXPO_PUBLIC_API_URL}`,
                 'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
             }
         }
 
         const res = await axios.request(options)
-        // console.log("RESPONSE: "+res.data);
+        console.log("RESPONSE: "+res.data);
         return res.data
     } catch(err){
         console.log("ERROR: "+err.message)

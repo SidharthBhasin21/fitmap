@@ -12,10 +12,10 @@ const Exercises = () => {
     const [exercises,setExercises] = useState([])
 
     const item = useLocalSearchParams();
-    
+    console.log(item)
     useEffect(() => {
         if(item) getExercises(item.name);
-    },[item])
+    },[])
     
     const getExercises = async (bodyPart) => {
         let data = await fetchExercisesByBodyPart(bodyPart);
@@ -39,7 +39,7 @@ const Exercises = () => {
             </TouchableOpacity>
 
 
-            <View className="mx-4 space-y-3 mt-4">N
+            <View className="mx-4 space-y-3 mt-4">
                 <Text 
                     className="font-semibold text-neutral-700"
                     style={{fontSize: hp(3)}}
